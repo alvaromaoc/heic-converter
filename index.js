@@ -8,7 +8,7 @@ const {
     promisify
 } = require('util');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 var storage = multer.diskStorage({
     destination: function(req, file, callback) {
